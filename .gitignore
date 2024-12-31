@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+
+# Virtual Environment
+venv/
+rasa_env/
+
+# Rasa specific
+models/
+*.tar.gz
+*.sqlite
+*.db
+*.log
+*.lock
+*.json
+*.md
+
+# Cache and temp files
+data/.cache/
+data/cache/
+*.tmp
+*.temp
+*.bak
+
+# Endpoints and secrets
+endpoints.yml
+credentials.yml
+
+# IDE specific files
+.vscode/
+.idea/
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
