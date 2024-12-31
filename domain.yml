@@ -1,0 +1,45 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - ask_opening_hours
+  - list_menu
+  - place_order
+
+entities:
+  - day
+  - item
+
+slots:
+  day:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: day
+  items:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: item
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I help you?"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+
+  utter_opening_hours:
+    - text: "We are open on {day} from {open} to {close}."
+
+  utter_menu:
+    - text: "Our menu includes: Pizza, Lasagne, Hot-dog, Burger, Spaghetti Carbonara, and Tiramisu."
+
+  utter_order_confirmation:
+    - text: "You have ordered: {items}. Your order will be ready shortly."
+
+actions:
+  - action_check_opening_hours
+  - action_list_menu
+  - action_process_order

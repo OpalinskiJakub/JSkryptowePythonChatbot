@@ -11,6 +11,7 @@ rasa_env/
 
 # Rasa specific
 models/
+.rasa/
 *.tar.gz
 *.sqlite
 *.db
