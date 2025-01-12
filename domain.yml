@@ -6,6 +6,8 @@ intents:
   - ask_opening_hours
   - list_menu
   - place_order
+  - inform  
+  - out_of_scope
 
 entities:
   - day
@@ -38,6 +40,16 @@ responses:
 
   utter_order_confirmation:
     - text: "You have ordered: {items}. Your order will be ready shortly."
+
+  utter_ask_day:
+    - text: "Could you tell me which day you're asking about?"
+
+  utter_out_of_scope:
+    - text: "I'm sorry, I didn't understand that. Can you rephrase?"
+
+  utter_invalid_day:
+    - text: "I'm sorry, I didn't understand the day you mentioned. Could you provide a valid day of the week?"
+
 
 actions:
   - action_check_opening_hours

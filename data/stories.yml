@@ -1,18 +1,30 @@
 version: "3.0"
+
 stories:
-- story: ask opening hours
+- story: Ask opening hours with a specific day
   steps:
   - intent: ask_opening_hours
+    entities:
+      - day: "{day}"  # Ogólna encja dla dowolnego dnia
   - action: action_check_opening_hours
 
-- story: list menu
+- story: Ask opening hours without a specific day
+  steps:
+  - intent: ask_opening_hours
+  - action: utter_ask_day
+  - intent: inform
+    entities:
+      - day: "{day}"  # Użytkownik podaje dowolny dzień
+  - action: action_check_opening_hours
+
+- story: List menu
   steps:
   - intent: list_menu
   - action: action_list_menu
 
-- story: place order
+- story: Place order
   steps:
   - intent: place_order
     entities:
-      - item: "Pizza"
+      - item: "{item}"  # Obsługa dowolnego przedmiotu z menu
   - action: action_process_order

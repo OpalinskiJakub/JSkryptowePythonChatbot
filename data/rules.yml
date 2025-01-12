@@ -1,4 +1,5 @@
 version: "3.0"
+
 rules:
 - rule: Greet the user
   steps:
@@ -9,3 +10,9 @@ rules:
   steps:
   - intent: goodbye
   - action: utter_goodbye
+
+- rule: Handle out of scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+

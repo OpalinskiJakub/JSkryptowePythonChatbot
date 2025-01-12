@@ -1,4 +1,5 @@
 version: "3.0"
+
 nlu:
 - intent: greet
   examples: |
@@ -6,28 +7,56 @@ nlu:
     - hi
     - hey
     - good morning
+    - good evening
+    - helo  # literówka
+    - hola  # inne języki
 
 - intent: goodbye
   examples: |
     - bye
     - goodbye
     - see you later
+    - take care
+    - c ya
+    - later
 
 - intent: ask_opening_hours
   examples: |
     - When are you open?
-    - What are your hours?
+    - What are your opening hours?
     - Are you open on [Monday](day)?
+    - What time do you close on [Friday](day)?
+    - Opening hours for [Saturday](day)?
     - Is the restaurant open on [Sunday](day)?
+    - Wht are your hours?  # literówka
 
 - intent: list_menu
   examples: |
+    - What can I order?
     - Show me the menu
-    - What do you have?
     - List your dishes
+    - Can I see the menu?
+    - What do you serve?
+    - Tell me your menu
+    - Menu please
+    - Wht's on the menu?  # literówka
 
 - intent: place_order
   examples: |
     - I want to order [Pizza](item)
-    - Can I have a [Burger](item) without onions?
-    - I'd like to order [Lasagne](item) and [Tiramisu](item)
+    - Can I get a [Burger](item) with extra cheese?
+    - I'd like [Lasagne](item) and [Tiramisu](item)
+    - Order [Hot-dog](item) with ketchup
+    - I want [Spaghetti Carbonara](item)
+    - Can I have a [Pizza](item) with no olives?
+    - Place an order for [Burger](item) and [Tiramisu](item)
+    
+- intent: out_of_scope
+  examples: |
+    - Tell me a joke
+    - What's the weather today?
+    - Can you sing a song?
+    - How old are you?
+    - Can you help me with my homework?
+
+
